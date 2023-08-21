@@ -1,0 +1,41 @@
+#add_tags{
+    display: flex;
+    flex-wrap: wrap;
+    margin-block: 1em;
+    justify-content: center;
+    align-items: center;
+    /* gap : 1em; */
+}
+#add_tags > p{
+    width: 100%;
+    margin-block-start : 0.5em;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.addquestion_tag{
+    background-color: rgb(17, 17, 20);
+    padding-inline: 0.5em;
+    padding-block: 0.3em;
+    border-radius: 1em;
+    margin-inline: 0.2em;
+}
+
+@media screen and (min-width: 480px) {
+    #add_tags > p {
+        font-size: 2rem;
+    }
+    .addquestion_tag{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #add_tags > p{
+        font-size: 1.5rem;
+    }
+    .addquestion_tag{
+        font-size: 1.1rem;
+    }
+}
+

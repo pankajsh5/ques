@@ -1,0 +1,93 @@
+#logo{
+    width: 40vw;
+}
+
+#ham,#close{
+    width: 10vw;
+}
+#close{
+    position: absolute;
+    top : 1em;
+    left : 1em;
+}
+
+header{
+    /* background-color: red; */
+    padding: 0.4em;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    border-bottom: 2px solid var(--border);
+    z-index: 1;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 250ms;
+    transition-property: left;
+    transition-timing-function: ease-in;
+    left: -65vw;
+    gap: 1em;
+    width: 65vw;
+    height: 100vh;
+    z-index: 2;
+}
+nav > .navlink{
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+.shownav{
+    left : 0;
+}
+
+
+@media screen and (min-width: 480px) {
+   nav > .navlink{
+        font-size: 3.1rem;
+   }
+   nav{
+        gap : 1.5em;
+   }
+   #logo{
+    width: 28vw;
+   }
+   #ham,#close{
+    width: 8vw;
+   }
+}
+@media screen and ( min-width : 900px ) {
+    header{
+        padding-inline: 3em;
+        align-items: center;
+        gap : 2em;
+    }
+    #ham,#close{
+        display : none;
+    }
+    #logo{
+        width: 12vw;
+    }
+    nav{
+        position: static;
+        flex-direction: row;
+        width: fit-content;
+        height: fit-content;
+        /* outline: 1px solid red; */
+        flex-grow: 1;
+    }
+    nav > .navlink{
+        font-size: 1.7rem;
+        transition: scale 250ms ease-in;
+        /* background-color: red; */
+    }
+    nav > .navlink:hover{
+        scale : 1.15;
+    }
+}
+
+

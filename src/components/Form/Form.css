@@ -1,0 +1,30 @@
+form{
+    margin-top: 2em;
+    display: flex;
+    padding-block: 3em;
+    flex-direction: column;
+    gap : 1em;
+    align-items: center;
+}
+
+form > h1{
+    font-size: 2.8rem;
+}
+
+
+@media screen and (min-width: 480px) {
+    form{
+        gap : 1.5em;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    form{
+        width: 60vw;
+        margin-inline: auto;
+    }
+    form > h1{
+        font-size: 2.5rem;
+    }
+}   

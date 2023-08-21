@@ -1,0 +1,96 @@
+#Challenge{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 1.2em;
+    position: relative;
+}
+
+#reload{
+    height: 25px;
+}
+
+.spin{
+    animation: reload-spin 1.7s linear 0ms infinite forwards ;
+}
+
+.challenge_item{
+    border-block: 2px solid var(--border);
+    position: relative;;
+    width: 100%;
+    padding-inline: 0.8em;
+    padding-block : 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap : 0.7em;
+}
+
+.challenge_title{
+    text-decoration: none;
+}
+
+.challenge_progress{
+    width: 100%;
+    border : 0.2px solid var(--border);
+    border-radius : 2em;
+}
+.challenge_owner{
+    text-align: right;
+    margin-top : 0.5em;
+}
+
+.challenge_progress > div{
+    width: 40%;
+    padding-block : 0.3em;
+    border-radius : 2em;
+    background-color: var(--btn1);
+}
+
+.challenge_solved{
+    color : white;
+}
+
+#Add_challenge{
+    width: 12%;
+    position: sticky;
+    bottom : 0.5em;
+    margin-block : 0.5em;
+}
+.cross{
+    position: absolute;
+    top : -5px;
+    right : 0px;
+}
+
+@keyframes reload-spin {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    #Challenge{
+        gap : 2em;
+    }
+    .challenge_item{
+        padding-inline: 2.3em;
+        gap : 1.5em;
+    }
+
+}
+@media screen and ( min-width : 900px ) {
+    #Challenge{
+        min-width: 1000px;
+        margin-inline: auto;
+    }
+    .challenge_item{
+        border : 2px solid var(--border);
+        border-radius : 2em;
+    }
+    #Add_challenge{
+        width : 5%;
+    }
+}

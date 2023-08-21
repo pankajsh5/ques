@@ -1,0 +1,103 @@
+#solution_code {
+    position: relative;
+    margin-block: 2em;
+    width: 100%;
+    /* overflow-x: hidden; */
+    padding-inline: 0.4em;
+}
+
+#solution_controls {
+    position: absolute;
+    top: -1em;
+    right: 0;
+}
+
+#solution_controls>img {
+    margin-inline: 0.2em;
+}
+.label{
+    position: absolute;
+    top : 0;
+    left : 0;
+    padding : 0.3em 1em;
+    border-radius: 3em;
+    border: 1px solid yellow;
+    background-color: rgb(54, 63, 72);
+    color : rgb(255, 230, 0);
+}
+#solution_modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: #131743e3;
+    z-index: 10000;
+    padding-block-start: 3em;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    gap: 2em;
+}
+
+#solution_modal>img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#new_solution {
+    width: 90%;
+    /* height: 40%; */
+    min-height: 200px;
+    background-color: rgb(47, 52, 57);
+    color: white;
+    padding: 1em;
+    border-radius: 1em;
+    padding: 1em;
+    margin-inline: auto;
+    
+}
+
+#langoption{
+    position: absolute;
+    top : -10px;
+    right : 0;
+    z-index: 100;
+    background-color: rgb(20, 20, 23);
+    color : yellow;
+    padding : 0.3em 1em;
+    border : 1px solid yellow;
+    border-radius: 2em;
+    outline: none;
+}
+
+
+#modal_content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+    #solution_modal>textarea::placeholder {
+        font-size: 1.7rem;
+    }
+    #solution_modal>textarea {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #solution_code{
+        width: 60%;
+        margin-inline: auto;
+    }
+    #solution_modal>textarea::placeholder {
+        font-size: 1.2rem;
+    }
+    #solution_modal>textarea {
+        font-size: 1.2rem;
+        width: 60%;
+    }
+}
